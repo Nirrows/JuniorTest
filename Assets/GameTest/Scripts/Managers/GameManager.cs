@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,10 +21,5 @@ public class GameManager : MonoBehaviour
 
         if(LangManager == null)
             LangManager = GetComponentInChildren<LangManager>();
-    }
-
-    public void SubscribeLangListener(ILangListener newListener)
-    {
-        LangManager.OnUpdate += newListener.OnUpdateLang;
     }
 }

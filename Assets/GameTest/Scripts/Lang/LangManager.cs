@@ -52,8 +52,7 @@ public class LangManager : MonoBehaviour
     }
     public void LoadLocalCSV()
     {
-        LanguageManager = LanguageU.loadCodexFromString("local", localCSV.text);
-        OnUpdate();
+        LanguageManager = LanguageU.loadCodexFromString("local", localCSV.text, OnUpdate);
     }
     public IEnumerator DownloadCSV(string url)
     {
@@ -62,8 +61,8 @@ public class LangManager : MonoBehaviour
 
         yield return www.SendWebRequest();
 
-        LanguageManager = LanguageU.loadCodexFromString("www", www.downloadHandler.text);
+        LanguageManager = LanguageU.loadCodexFromString("www", www.downloadHandler.text, OnUpdate);
 
-        OnUpdate();
+        //OnUpdate();
     }
 }

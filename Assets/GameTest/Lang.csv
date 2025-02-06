@@ -3,6 +3,8 @@ spa,langAsk,Primero lo primero... en que idioma te gustaria que hablaramos?
 eng,langAsk,First things first... what language would you like us to speak?
 spa,selectionAsk,Estas seguro que deseas Español?
 eng,selectionAsk,Are you sure you want English?
+spa,reLangAsk,Entonces... cual sera?
+eng,reLangAsk,So... which one will it be?
 spa,spa,Español
 eng,spa,Spanish
 spa,eng,Ingles

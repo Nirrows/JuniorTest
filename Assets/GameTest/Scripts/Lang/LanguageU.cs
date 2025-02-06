@@ -6,7 +6,7 @@ using System.Linq;
 
 public class LanguageU : MonoBehaviour
 {
-    public static Dictionary<Language, Dictionary<string, string>> loadCodexFromString(string source, string sheet)
+    public static Dictionary<Language, Dictionary<string, string>> loadCodexFromString(string source, string sheet, Action update)
     {
         var codex = new Dictionary<Language, Dictionary<string, string>>();
 
@@ -64,6 +64,7 @@ public class LanguageU : MonoBehaviour
 
         }
 
+        update();
         return codex;
     }
 }
