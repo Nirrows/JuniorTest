@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogScene : MonoBehaviour
+public interface ILangListener
 {
+   public void OnUpdateLang();
 
 }
