@@ -123,18 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &404649 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8746895834558130333, guid: 909612dc8ee505249b7f68429ae4b0b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 6146060943843772065}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b3a9bf7aa9fc549b6f638aa0ed0379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &56730635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,11 +2712,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4502997149090886115, guid: 909612dc8ee505249b7f68429ae4b0b3,
-        type: 3}
-      propertyPath: LangManager
-      value: 
-      objectReference: {fileID: 404649}
     - target: {fileID: 8661340874302554827, guid: 909612dc8ee505249b7f68429ae4b0b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2783,16 +2766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: localCSV
       value: 
-      objectReference: {fileID: 4900000, guid: 1909166af7320f8469337f71fcb2b044, type: 3}
-    - target: {fileID: 8746895834558130333, guid: 909612dc8ee505249b7f68429ae4b0b3,
-        type: 3}
-      propertyPath: externalURL
-      value: https://docs.google.com/spreadsheets/d/e/2PACX-1vQsKNch9Cd2p8Wdk11Rys2_zF-W7swB6Mm7u71caFCdpjoAbu5GIponeG7Ohym4GBLkN12YhrnfcKsa/pub?gid=0&single=true&output=csv
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4900000, guid: cc6c23f8a9aa6e7469426e1ee26efe3e, type: 3}
     - target: {fileID: 8746895834558130333, guid: 909612dc8ee505249b7f68429ae4b0b3,
         type: 3}
       propertyPath: selectedLanguage
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

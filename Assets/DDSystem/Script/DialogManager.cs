@@ -105,7 +105,7 @@ namespace Doublsb.Dialog
         }
 
         public void Hide()
-        {
+        {       
             if(_textingRoutine != null)
                 StopCoroutine(_textingRoutine);
 
@@ -119,10 +119,7 @@ namespace Doublsb.Dialog
             state = State.Deactivate;
 
             if (_current_Data.Callback != null)
-            {
                 _current_Data.Callback.Invoke();
-                _current_Data.Callback = null;
-            }
         }
         #endregion
 
@@ -131,6 +128,7 @@ namespace Doublsb.Dialog
         public void Select(int index)
         {
             Result = _current_Data.SelectList.GetByIndex(index).Key;
+
             Hide();
         }
 

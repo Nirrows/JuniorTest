@@ -1,4 +1,21 @@
 Idioma,ID,Texto
-spa,ScnTest,Hola Que tal!?
-eng,ScnTest,"Hi how are things?
-I hope fine!"
+spa,langAsk,Primero lo primero... en que idioma te gustaria que hablaramos?
+eng,langAsk,First things first... what language would you like us to speak?
+spa,selectionAsk,Estas seguro que deseas Español?
+eng,selectionAsk,Are you sure you want English?
+spa,spa,Español
+eng,spa,Spanish
+spa,eng,Ingles
+eng,eng,English
+spa,confirm,Confirmar
+eng,confirm,Confirm
+spa,cancel,Cancelar
+eng,cancel,Cancel
+spa,greeting1,Hola
+eng,greeting1,Hi
+spa,greeting2,Bienvenido
+eng,greeting2,Welcome
+spa,greeting3,Buenas
+eng,greeting3,Hello
+spa,langSave,Perfecto! continuemos...
+eng,langSave,Perfect! Let's continue...

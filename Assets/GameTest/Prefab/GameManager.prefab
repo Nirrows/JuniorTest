@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DataLibrary: {fileID: 58170590884747831}
+  LangManager: {fileID: 8746895834558130333}
 --- !u!1 &7998888370978076172
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,8 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b3a9bf7aa9fc549b6f638aa0ed0379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  externalURL: hhttps://docs.google.com/spreadsheets/d/e/2PACX-1vQsKNch9Cd2p8Wdk11Rys2_zF-W7swB6Mm7u71caFCdpjoAbu5GIponeG7Ohym4GBLkN12YhrnfcKsa/pub?gid=0&single=true&output=csv
-  selectedLanguage: 0
+  externalURL: https://docs.google.com/spreadsheets/d/e/2PACX-1vQsKNch9Cd2p8Wdk11Rys2_zF-W7swB6Mm7u71caFCdpjoAbu5GIponeG7Ohym4GBLkN12YhrnfcKsa/pub?gid=0&single=true&output=csv
+  localCSV: {fileID: 4900000, guid: a1d4c4461c4a825449bfa770b8a8e40a, type: 3}
+  selectedLanguage: 1
 --- !u!1 &8855448060704718042
 GameObject:
   m_ObjectHideFlags: 0
