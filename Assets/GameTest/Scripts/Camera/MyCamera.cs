@@ -13,20 +13,20 @@ public class MyCamera : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(FadeIn());
+        StartCoroutine(CR_FadeIn());
     }
 
     public void FadeToBlack()
     {
-        StartCoroutine(FadeOut());
+        StartCoroutine(CR_FadeOut());
     }
 
     public void FadeFromBlack()
     {
-        StartCoroutine(FadeIn());
+        StartCoroutine(CR_FadeIn());
     }
 
-    private IEnumerator FadeOut()
+    private IEnumerator CR_FadeOut()
     {
         float elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
@@ -39,7 +39,7 @@ public class MyCamera : MonoBehaviour
         _isFadeOut = true;
     }
 
-    private IEnumerator FadeIn()
+    private IEnumerator CR_FadeIn()
     {
         float elapsedTime = fadeDuration;
         while (elapsedTime > 0f)

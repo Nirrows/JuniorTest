@@ -20,8 +20,6 @@ public class LangManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
-
         _instance = this;
 
         if (localCSV != null)
