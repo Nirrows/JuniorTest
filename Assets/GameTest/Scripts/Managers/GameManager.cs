@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public ScriptObjLibrary DataLibrary;
     public LangManager LangManager;
+
+    [SerializeField] private MyCamera _myCamera;
 
     private void Awake()
     {
@@ -21,5 +24,20 @@ public class GameManager : MonoBehaviour
 
         if(LangManager == null)
             LangManager = GetComponentInChildren<LangManager>();
+
+        if (_myCamera == null)
+            _myCamera = Camera.main.GetComponent<MyCamera>();
+    }
+
+    public void SwitchScene(int index)
+    {
+        _myCamera.FadeToBlack();
+        StartCoroutine(WaitFadeOut(index));
+    }
+
+    private IEnumerator WaitFadeOut(int index)
+    {
+        yield return new WaitUntil(_myCamera.IsFadeOut);
+        SceneManager.LoadScene(index);
     }
 }

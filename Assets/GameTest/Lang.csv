@@ -21,3 +21,27 @@ spa,greeting3,Buenas
 eng,greeting3,Hello
 spa,langSave,Perfecto! continuemos...
 eng,langSave,Perfect! Let's continue...
+spa,easy,Facil
+eng,easy,Easy
+spa,normal,Normal
+eng,normal,Standar
+spa,hard,Difícil
+eng,hard,Hard
+spa,difficultyIntro,¡Ahora sólo queda elegir la dificultad!
+eng,difficultyIntro,Now all that's left to do is choose the difficulty!
+spa,difficultyAsk,Elegir Dificultad...
+eng,difficultyAsk,Select Difficulty...
+spa,difficultyConfirm,¿Estás seguro de que quieres esta dificultad?
+eng,difficultyConfirm,Are you sure you want this difficulty?
+spa,difficultyAskAgain,Dime cuál...
+eng,difficultyAskAgain,You tell me which one...
+spa,introFinish,¡Ahora a jugar!
+eng,introFinish,Now let's play!
+spa,wrong,Equivocado
+eng,wrong,Wrong
+spa,correct,Correcto
+eng,correct,Correct
+spa,won,¡Ganaste!
+eng,won,You Won!
+spa,lost,¡Perdiste!
+eng,lost,You Lost!
