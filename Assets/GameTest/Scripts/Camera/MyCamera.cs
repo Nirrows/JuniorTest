@@ -11,11 +11,6 @@ public class MyCamera : MonoBehaviour
     private bool _isFadeOut;
     public bool IsFadeOut() { return _isFadeOut; }
 
-    private void Start()
-    {
-        StartCoroutine(CR_FadeIn());
-    }
-
     public void FadeToBlack()
     {
         StartCoroutine(CR_FadeOut());

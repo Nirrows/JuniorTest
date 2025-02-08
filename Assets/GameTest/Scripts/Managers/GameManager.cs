@@ -11,8 +11,7 @@ public class GameManager : MonoBehaviour
 
     public ScriptObjLibrary DataLibrary;
     public LangManager LangManager;
-
-    [SerializeField] private MyCamera _myCamera;
+    public MyCamera myCam;
 
     private void Awake()
     {
@@ -25,19 +24,20 @@ public class GameManager : MonoBehaviour
         if(LangManager == null)
             LangManager = GetComponentInChildren<LangManager>();
 
-        if (_myCamera == null)
-            _myCamera = Camera.main.GetComponent<MyCamera>();
+        if (myCam == null)
+            myCam = Camera.main.GetComponent<MyCamera>();
     }
+
+
 
     public void SwitchScene(int index)
     {
-        _myCamera.FadeToBlack();
+        myCam.FadeToBlack();
         StartCoroutine(WaitFadeOut(index));
     }
-
     private IEnumerator WaitFadeOut(int index)
     {
-        yield return new WaitUntil(_myCamera.IsFadeOut);
+        yield return new WaitUntil(myCam.IsFadeOut);
         SceneManager.LoadScene(index);
     }
 }

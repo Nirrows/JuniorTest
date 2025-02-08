@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SessionData", menuName = "Info/SessionData")]
 public class SessionData : ScriptableObject
 {
-    [SerializeField] private Difficulty _actualDifficulty;
+    public Difficulty actualDifficulty { get; private set; }
     [SerializeField] private int _points;
 
     private int _doorsAmount;
@@ -13,7 +13,7 @@ public class SessionData : ScriptableObject
 
     public void SetDifficulty(Difficulty selectedDifficulty)
     {
-        _actualDifficulty = selectedDifficulty;
+        actualDifficulty = selectedDifficulty;
     }
     public void AddPoints(int value)
     {
@@ -26,7 +26,7 @@ public class SessionData : ScriptableObject
 
     public int GetTotalDoors()
     {
-        switch (_actualDifficulty)
+        switch (actualDifficulty)
         {
             case Difficulty.easy:
                 return 6;
@@ -40,7 +40,7 @@ public class SessionData : ScriptableObject
     }
     public int GetTotalLife()
     {
-        switch (_actualDifficulty)
+        switch (actualDifficulty)
         {
             case Difficulty.easy:
                 return 6;

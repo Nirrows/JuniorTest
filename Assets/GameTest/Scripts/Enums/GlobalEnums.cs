@@ -10,3 +10,10 @@ public enum Difficulty
     normal,
     hard
 }
+
+public enum DoorPosition
+{
+    center,
+    left,
+    right
+}

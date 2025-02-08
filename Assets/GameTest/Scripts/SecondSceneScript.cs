@@ -2,26 +2,69 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Doublsb.Dialog;
+using System;
 
 public class SecondSceneScript : MonoBehaviour
 {
 
     public DialogManager DialogManager;
+    private Action Test;
 
-    private void Awake()
+    private void Start()
+    {
+        Tuto();
+    }
+
+    private void Tuto()
     {
         var dialogTexts = new List<DialogData>();
 
-        dialogTexts.Add(new DialogData("Here you can create any mini-game you can think of and make me react to it", Flyweight.DIALOG_CHAR_HALF));
+        dialogTexts.Add(new DialogData(LangManager.Instance.GetTranslate("riddle2easy")));
 
-        dialogTexts.Add(new DialogData("I doesn't have to be complex nor long, just some short and simple stuff.", Flyweight.DIALOG_CHAR_HALF));        
+        dialogTexts.Add(new DialogData(LangManager.Instance.GetTranslate("tittle1") + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HALF));
 
-        dialogTexts.Add(new DialogData("Use my sprite, leave me on a side of the screen, make a few animations", Flyweight.DIALOG_CHAR_HALF));
+        dialogTexts.Add(new DialogData(Flyweight.EMOTE_HALF_HAPPY + "/size:up/" + LangManager.Instance.GetTranslate("tittle2"), Flyweight.DIALOG_CHAR_HALF));
 
-        dialogTexts.Add(new DialogData("And depending the actions of the mini-game change mi animation state, move me or do whatever crazy stuff you can think of!", Flyweight.DIALOG_CHAR_HEAD));
+        dialogTexts.Add(new DialogData(Flyweight.EMOTE_HALF_SAD + "/size:init/" + LangManager.Instance.GetTranslate("tuto1") + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HALF));
 
-        dialogTexts.Add(new DialogData("/emote:Happy/"+"After the player finishes the game, make me say something and move to the ThirdScene.", Flyweight.DIALOG_CHAR_HEAD));
-        
+        dialogTexts.Add(new DialogData(Flyweight.EMOTE_HALF_SCARED + LangManager.Instance.GetTranslate("tuto2") + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HALF));
+
+        dialogTexts.Add(new DialogData(Flyweight.EMOTE_HALF_THINKING + LangManager.Instance.GetTranslate("tuto3"), Flyweight.DIALOG_CHAR_HALF));
+
+        var startGame = new DialogData("Ready?");
+        startGame.SelectList.Add("yes", "Continue...");
+        startGame.Callback = () => Intro();
+
+        dialogTexts.Add(startGame);
         DialogManager.Show(dialogTexts);
+    }
+
+    private void Intro()
+    {
+        GameManager.Instance.myCam.FadeFromBlack();
+    }
+    private void ReadRiddle()
+    {
+
+    }
+
+    private void ChooseDoor()
+    {
+
+    }
+
+    private void GrabRiddle(string ID, Difficulty value)
+    {
+        var dialogTexts = new List<DialogData>();
+
+        var difChoose = new DialogData("/size:init/" + "Que puerta sera la correcta?");
+
+        difChoose.SelectList.Add(DoorPosition.center, "Centro");
+        difChoose.SelectList.Add(DoorPosition.right, "Derecha");
+        difChoose.SelectList.Add(DoorPosition.left, "Izquierda");
+
+        difChoose.Callback = () => Test();
+
+        dialogTexts.Add(difChoose);
     }
 }

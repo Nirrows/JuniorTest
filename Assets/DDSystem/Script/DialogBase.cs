@@ -50,7 +50,8 @@ namespace Doublsb.Dialog
         speed,
         click,
         close,
-        wait
+        wait,
+        jump
     }
 
     public enum TextColor
@@ -184,6 +185,11 @@ namespace Doublsb.Dialog
 
         private DialogCommand _convert_Syntex_To_Command(string text)
         {
+            if (text == "n") // Detecta el comando /n/
+            {
+                return new DialogCommand(Command.print, "\n");
+            }
+
             var spliter = text.Split(':');
 
             Command command;
@@ -370,6 +376,11 @@ namespace Doublsb.Dialog
         {
             ItemList.Add(new DialogSelectItem(Key, Value));
         }
+        public void Add<T>(T Key, string Value)
+        {
+            ItemList.Add(new DialogSelectItem(Key.ToString(), Value));
+        }
+
 
         public void Remove(string Key)
         {

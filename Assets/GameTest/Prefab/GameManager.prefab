@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataLibrary: {fileID: 58170590884747831}
   LangManager: {fileID: 8746895834558130333}
+  _myCamera: {fileID: 0}
 --- !u!1 &7998888370978076172
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   externalURL: https://docs.google.com/spreadsheets/d/e/2PACX-1vQsKNch9Cd2p8Wdk11Rys2_zF-W7swB6Mm7u71caFCdpjoAbu5GIponeG7Ohym4GBLkN12YhrnfcKsa/pub?gid=0&single=true&output=csv
-  localCSV: {fileID: 4900000, guid: 4debd6e91c9f25c4ea87b081f2c4c36e, type: 3}
+  localCSV: {fileID: 4900000, guid: 74e2f7b184468ad42bd2d1d4a88c5494, type: 3}
   selectedLanguage: 0
 --- !u!1 &8855448060704718042
 GameObject:

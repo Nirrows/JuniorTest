@@ -25,8 +25,8 @@ public class FirstSceneScript : MonoBehaviour
 
         var langChoose = new DialogData("...");
 
-        langChoose.SelectList.Add(Language.spa.ToString(), LangManager.Instance.GetTranslate(Language.spa.ToString()) + ".");
-        langChoose.SelectList.Add(Language.eng.ToString(), LangManager.Instance.GetTranslate(Language.eng.ToString()) + ".");
+        langChoose.SelectList.Add(Language.spa, LangManager.Instance.GetTranslate(Language.spa.ToString()) + ".");
+        langChoose.SelectList.Add(Language.eng, LangManager.Instance.GetTranslate(Language.eng.ToString()) + ".");
         langChoose.Callback = () => SetLang();
 
         dialogTexts.Add(langChoose);
@@ -53,9 +53,9 @@ public class FirstSceneScript : MonoBehaviour
 
             var difChoose = new DialogData("/size:init/" + LangManager.Instance.GetTranslate("difficultyAsk"));
 
-            difChoose.SelectList.Add(Difficulty.easy.ToString(), LangManager.Instance.GetTranslate(Difficulty.easy.ToString()));
-            difChoose.SelectList.Add(Difficulty.normal.ToString(), LangManager.Instance.GetTranslate(Difficulty.normal.ToString()));
-            difChoose.SelectList.Add(Difficulty.hard.ToString(), LangManager.Instance.GetTranslate(Difficulty.hard.ToString()));
+            difChoose.SelectList.Add(Difficulty.easy, LangManager.Instance.GetTranslate(Difficulty.easy.ToString()));
+            difChoose.SelectList.Add(Difficulty.normal, LangManager.Instance.GetTranslate(Difficulty.normal.ToString()));
+            difChoose.SelectList.Add(Difficulty.hard, LangManager.Instance.GetTranslate(Difficulty.hard.ToString()));
 
             difChoose.Callback = () => ConfirmDifficulty();
 
@@ -77,9 +77,9 @@ public class FirstSceneScript : MonoBehaviour
 
         var difChoose = new DialogData(LangManager.Instance.GetTranslate("difficultyAskAgain"));
 
-        difChoose.SelectList.Add(Difficulty.easy.ToString(), LangManager.Instance.GetTranslate(Difficulty.easy.ToString()));
-        difChoose.SelectList.Add(Difficulty.normal.ToString(), LangManager.Instance.GetTranslate(Difficulty.normal.ToString()));
-        difChoose.SelectList.Add(Difficulty.hard.ToString(), LangManager.Instance.GetTranslate(Difficulty.hard.ToString()));
+        difChoose.SelectList.Add(Difficulty.easy, LangManager.Instance.GetTranslate(Difficulty.easy.ToString()));
+        difChoose.SelectList.Add(Difficulty.normal, LangManager.Instance.GetTranslate(Difficulty.normal.ToString()));
+        difChoose.SelectList.Add(Difficulty.hard, LangManager.Instance.GetTranslate(Difficulty.hard.ToString()));
 
         difChoose.Callback = () => ConfirmDifficulty();
 

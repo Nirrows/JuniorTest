@@ -45,3 +45,31 @@ spa,won,¡Ganaste!
 eng,won,You Won!
 spa,lost,¡Perdiste!
 eng,lost,You Lost!
+spa,tittle1,Bienvenido a
+eng,tittle1,Welcome to
+spa,tittle2,¡La Mazmorra De La Esfinge!
+eng,tittle2,¡The Dungeon of the Sphinx!
+spa,tuto1,Al explorar las ruinas caíste en una trampa! para salir deberás atravesar todas las salas de la esfinge
+eng,tuto1,While exploring the ruins you fell into a trap! to get out you must go through all the rooms of the sphinx
+spa,tuto2,Pero debes tener cuidado... no todas las puertas son seguras
+eng,tuto2,But you must be careful... not all doors are safe
+spa,tuto3,Debes descubrir cuáles son las correctas respondiendo algunos acertijos!
+eng,tuto3,You must discover which are the correct ones by answering some riddles!
+spa,ellipsis,/speed:0.1/.../speed:init/
+eng,ellipsis,/speed:0.1/.../speed:init/
+spa,riddle1easy,En castillos me verás.../n/De hierro puedo ser. Sin mí no podrías luchar ni tampoco defender. ¿Qué soy?
+eng,riddle1easy,In castles you will see me.../n/I can be made of iron. Without me you could not fight nor defend yourself. What am I?
+spa,riddle1easyTrue,Una Armadura.
+eng,riddle1easyTrue,An Armor.
+spa,riddle1easyFalse1,Un Escudo.
+eng,riddle1easyyFalse1,A Shield.
+spa,riddle1easyFalse2,Una Muralla.
+eng,riddle1easyFalse2,A Wall.
+spa,riddle2easy,En la mesa del rey me puedes hallar.../n/Aunque de madera no suelo estar. ¿Qué soy?
+eng,riddle2easy,You can find me at the king's table.../n/Although I am not usually made of wood. What am I?
+spa,riddle2easyTrue,Un Plato.
+eng,riddle2easyTrue,A Plate.
+spa,riddle2easyFalse1,Una Corona.
+eng,riddle2easyFalse1,A Crown.
+spa,riddle2easyFalse2,Una Espada.
+eng,riddle2easyFalse2,A Sword.

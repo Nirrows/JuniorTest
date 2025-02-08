@@ -7,16 +7,20 @@ public static class Flyweight
     public const string DIALOG_CHAR_HALF = "half";
     public const string DIALOG_CHAR_HEAD = "head";
 
-    public const string EMOTE_HALF_NORMAL = "Normal";
-    public const string EMOTE_HALF_SAD = "Sad";
-    public const string EMOTE_HALF_HAPPY = "Happy";
+    public const string EMOTE_HALF_NORMAL = "/emote:Normal/";
+    public const string EMOTE_HALF_SAD = "/emote:Sad/";
+    public const string EMOTE_HALF_HAPPY = "/emote:Happy/";
+    public const string EMOTE_HALF_THINKING = "/emote:Thinking/";
+    public const string EMOTE_HALF_SCARED = "/emote:Scared/";
 
-    public const string EMOTE_HEAD_NORMAL = "Normal";
-    public const string EMOTE_HEAD_SAD = "Sad";
-    public const string EMOTE_HEAD_HAPPY = "Happy";
-    public const string EMOTE_HEAD_THINK = "Thinking";
-    public const string EMOTE_HEAD_SHY = "Shy";
-    public const string EMOTE_HEAD_LAUGH = "Laugh";
-    public const string EMOTE_HALF_SCARED = "Scared";
-    public const string EMOTE_HALF_ANGRY = "Angry";
+    public const string EMOTE_HEAD_NORMAL = "/emote:Normal/";
+    public const string EMOTE_HEAD_SAD = "/emote:Sad/";
+    public const string EMOTE_HEAD_HAPPY = "/emote:Happy/";
+    public const string EMOTE_HEAD_THINK = "/emote:Thinking/";
+    public const string EMOTE_HEAD_SHY = "/emote:Shy/";
+    public const string EMOTE_HEAD_LAUGH = "/emote:Laugh/";
+    public const string EMOTE_HEAD_SCARED = "/emote:Scared/";
+    public const string EMOTE_HEAD_ANGRY = "/emote:Angry/";
+
+    public const int RIDDLE_AMOUNT = 2;
 }
