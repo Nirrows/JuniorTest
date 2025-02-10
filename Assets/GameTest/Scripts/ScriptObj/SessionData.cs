@@ -6,11 +6,16 @@ using UnityEngine;
 public class SessionData : ScriptableObject
 {
     public Difficulty actualDifficulty { get; private set; }
+    public bool isGameStarted { get; private set; }
     [SerializeField] private int _points;
 
     private int _doorsAmount;
     private int _lifePoints;
 
+    public void SetGameStart()
+    {
+        isGameStarted = true;
+    }
     public void SetDifficulty(Difficulty selectedDifficulty)
     {
         actualDifficulty = selectedDifficulty;
@@ -24,7 +29,7 @@ public class SessionData : ScriptableObject
         _points = 0;
     }
 
-    public int GetTotalDoors()
+    public int GetTotalRiddles()
     {
         switch (actualDifficulty)
         {
@@ -45,9 +50,9 @@ public class SessionData : ScriptableObject
             case Difficulty.easy:
                 return 6;
             case Difficulty.normal:
-                return 4;
-            case Difficulty.hard:
                 return 3;
+            case Difficulty.hard:
+                return 1;
             default:
                 return 6;
         }

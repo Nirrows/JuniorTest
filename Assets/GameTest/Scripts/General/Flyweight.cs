@@ -6,6 +6,7 @@ public static class Flyweight
 {
     public const string DIALOG_CHAR_HALF = "half";
     public const string DIALOG_CHAR_HEAD = "head";
+    public const string DIALOG_CHAR_STONE = "stone";
 
     public const string EMOTE_HALF_NORMAL = "/emote:Normal/";
     public const string EMOTE_HALF_SAD = "/emote:Sad/";
@@ -22,5 +23,9 @@ public static class Flyweight
     public const string EMOTE_HEAD_SCARED = "/emote:Scared/";
     public const string EMOTE_HEAD_ANGRY = "/emote:Angry/";
 
-    public const int RIDDLE_AMOUNT = 2;
+    public static readonly int[] ROOMS_CREATION_EASY = { 5, 1, 0 };
+    public static readonly int[] ROOMS_CREATION_NORMAL = { 3, 4, 1 };
+    public static readonly int[] ROOMS_CREATION_HARD = { 0, 6, 6 };
+
+    public const int RIDDLE_AMOUNT = 6;
 }

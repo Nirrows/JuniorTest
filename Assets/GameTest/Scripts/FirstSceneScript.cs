@@ -5,12 +5,11 @@ using Doublsb.Dialog;
 using System;
 using UnityEngine.Events;
 
-public class FirstSceneScript : MonoBehaviour
+public class FirstSceneScript : SceneScript
 {
-    public DialogManager DialogManager;
     private bool _firstTime;
 
-    private void Start()
+    public override void StartScene()
     {
         _firstTime = true;
         AskLang();

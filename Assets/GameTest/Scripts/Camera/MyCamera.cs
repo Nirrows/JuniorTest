@@ -16,9 +16,9 @@ public class MyCamera : MonoBehaviour
         StartCoroutine(CR_FadeOut());
     }
 
-    public void FadeFromBlack()
+    public void FadeFromBlack(float duration = 0)
     {
-        StartCoroutine(CR_FadeIn());
+        StartCoroutine(CR_FadeIn(duration));
     }
 
     private IEnumerator CR_FadeOut()
@@ -34,13 +34,14 @@ public class MyCamera : MonoBehaviour
         _isFadeOut = true;
     }
 
-    private IEnumerator CR_FadeIn()
+    private IEnumerator CR_FadeIn(float duration = 0)
     {
-        float elapsedTime = fadeDuration;
+        float elapsedTime = duration == 0 ? fadeDuration : duration;
+
         while (elapsedTime > 0f)
         {
             elapsedTime -= Time.deltaTime;
-            fadeImage.color = new Color(0, 0, 0, elapsedTime / fadeDuration);
+            fadeImage.color = new Color(0, 0, 0, elapsedTime / duration);
             yield return null;
         }
 

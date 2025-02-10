@@ -1,27 +1,76 @@
 using System.Collections;
 using System.Collections.Generic;
-using Doublsb.Dialog;
 using UnityEngine;
+using System.Linq;
 
 public class RiddleSystem : MonoBehaviour
 {
-    Difficulty _difficulty;
+    private List<string> _riddleIDs;
+    public List<string> RiddleIDs { get { return _riddleIDs; } }
 
-    private void Awake()
+    public string TakeRiddleID()
     {
-        _difficulty = GameManager.Instance.DataLibrary.SessionInfo.actualDifficulty;
-    }
+        if (_riddleIDs.Count == 0)
+            return null;
 
-    public DialogData GetRiddle()
+        string riddleID = _riddleIDs[0];
+        _riddleIDs.RemoveAt(0);
+        return riddleID;
+    }
+    public void MakeRiddleIDs(Difficulty difficulty)
     {
-        string ID = "riddle" + Random.Range(1, Flyweight.RIDDLE_AMOUNT + 1) + _difficulty.ToString();
+        _riddleIDs = new List<string>();
 
-        return null;
+        int[] riddles = new int[3];
+
+        switch (difficulty)
+        {
+            case Difficulty.easy:
+                riddles = Flyweight.ROOMS_CREATION_EASY;
+                break;
+            case Difficulty.normal:
+                riddles = Flyweight.ROOMS_CREATION_NORMAL;
+                break;
+            case Difficulty.hard:
+                riddles = Flyweight.ROOMS_CREATION_HARD;
+                break;
+        }
+
+        if(riddles[0] != 0)
+        {
+            List<int> riddlesAvailables = Enumerable.Range(1, Flyweight.RIDDLE_AMOUNT).ToList();
+
+            for (int i = 0; i < riddles[0]; i++)
+            {
+                int riddleID = Random.Range(0, riddlesAvailables.Count);
+                _riddleIDs.Add("riddle" + riddlesAvailables[riddleID] + Difficulty.easy);
+                riddlesAvailables.RemoveAt(riddleID);
+            }
+        }
+
+        if (riddles[1] != 0)
+        {
+            List<int> riddlesAvailables = Enumerable.Range(1, Flyweight.RIDDLE_AMOUNT).ToList();
+
+            for (int i = 0; i < riddles[1]; i++)
+            {
+                int riddleID = Random.Range(0, riddlesAvailables.Count);
+                _riddleIDs.Add("riddle" + riddlesAvailables[riddleID] + Difficulty.normal);
+                riddlesAvailables.RemoveAt(riddleID);
+            }
+        }
+
+
+        if (riddles[2] != 0)
+        {
+            List<int> riddlesAvailables = Enumerable.Range(1, Flyweight.RIDDLE_AMOUNT).ToList();
+
+            for (int i = 0; i < riddles[2]; i++)
+            {
+                int riddleID = Random.Range(0, riddlesAvailables.Count);
+                _riddleIDs.Add("riddle" + riddlesAvailables[riddleID] + Difficulty.hard);
+                riddlesAvailables.RemoveAt(riddleID);
+            }
+        }
     }
-
-    //Se genera un ID de manera random para el acertijo
-    //Al ID se suma el ID de Respuestas true, false1, false2
-    //El acertijo se manda a la "Roca"
-    //Cada respuesta se manda a una puerta
-    //Podria ser un String[] de 4 el GetRiddle y la Scena maneja lo demas.
 }

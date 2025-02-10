@@ -2844,9 +2844,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4502997149090886115, guid: 909612dc8ee505249b7f68429ae4b0b3,
         type: 3}
+      propertyPath: myCam
+      value: 
+      objectReference: {fileID: 352199046}
+    - target: {fileID: 4502997149090886115, guid: 909612dc8ee505249b7f68429ae4b0b3,
+        type: 3}
       propertyPath: _myCamera
       value: 
       objectReference: {fileID: 352199046}
+    - target: {fileID: 4502997149090886115, guid: 909612dc8ee505249b7f68429ae4b0b3,
+        type: 3}
+      propertyPath: _actualScene
+      value: 
+      objectReference: {fileID: 56730637}
     - target: {fileID: 8661340874302554827, guid: 909612dc8ee505249b7f68429ae4b0b3,
         type: 3}
       propertyPath: m_LocalPosition.x
