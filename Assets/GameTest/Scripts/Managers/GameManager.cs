@@ -24,9 +24,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        DataLibrary.SessionInfo.SetDifficulty(Difficulty.hard);
-        DataLibrary.SessionInfo.SetGameStart();
-
         if (_instance == null)
             _instance = this;
 
