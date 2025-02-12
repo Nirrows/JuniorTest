@@ -132,8 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 56730636}
-  - component: {fileID: 56730637}
   - component: {fileID: 56730638}
+  - component: {fileID: 56730639}
   m_Layer: 0
   m_Name: DialogTester
   m_TagString: Untagged
@@ -156,21 +156,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &56730637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56730635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd781e2fdbca9424080c8dbb3f3114a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogManager: {fileID: 325689816}
-  _data: {fileID: 11400000, guid: ad5d8a470bd948c46ab26e91435a602e, type: 2}
-  _lang: {fileID: 56730638}
 --- !u!114 &56730638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +171,21 @@ MonoBehaviour:
   externalURL: https://docs.google.com/spreadsheets/d/e/2PACX-1vQsKNch9Cd2p8Wdk11Rys2_zF-W7swB6Mm7u71caFCdpjoAbu5GIponeG7Ohym4GBLkN12YhrnfcKsa/pub?gid=0&single=true&output=csv
   localCSV: {fileID: 4900000, guid: 8ed437513954a8a48b37737d0bedc56e, type: 3}
   selectedLanguage: 0
+--- !u!114 &56730639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56730635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ce3f8b8bc05494e9bdb82900fbfa75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogManager: {fileID: 325689816}
+  _data: {fileID: 11400000, guid: ad5d8a470bd948c46ab26e91435a602e, type: 2}
+  _lang: {fileID: 56730638}
 --- !u!1 &76003758
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cdd462abd453053419a990cea66008bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1aed9f45bbcb0ad42a95e0964020c085, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -27,5 +27,7 @@ public static class Flyweight
     public static readonly int[] ROOMS_CREATION_NORMAL = { 3, 4, 1 };
     public static readonly int[] ROOMS_CREATION_HARD = { 0, 6, 6 };
 
+    public const float BASE_POINTS = 10;
+
     public const int RIDDLE_AMOUNT = 6;
 }

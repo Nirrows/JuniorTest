@@ -15,5 +15,6 @@ public enum DoorPosition
 {
     center,
     left,
-    right
+    right,
+    stone
 }

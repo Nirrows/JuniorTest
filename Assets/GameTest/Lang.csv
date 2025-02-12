@@ -79,8 +79,8 @@ spa,hardPots,/speed:down/No no no no nooo!/speed:init/  Se rompieron prácticame
 eng,hardPots,/speed:down/No no no no nooo!/speed:init/ Almost all of them broke! Only one remained intact!!
 spa,getUp,Veamos como salir de aquí...
 eng,getUp,Let's see how to get out of here...
-spa,inspect,Lo único que veo son las 3 puertas y la roca del medio/n/aparte de algunas vasijas viejas que no me sirven de nada...
-eng,inspect,All I can see are the 3 doors and the rock in the middle/n/apart from some old pots that are of no use to me...
+spa,inspect,Lo único que veo son las 3 puertas y la roca del medio./n/aparte de algunas vasijas viejas que no me sirven de nada...
+eng,inspect,All I can see are the 3 doors and the rock in the middle./n/apart from some old pots that are of no use to me...
 spa,whatDo,¿Qué debería hacer?
 eng,whatDo,What should I do?
 spa,read,Leer de nuevo...
@@ -89,8 +89,18 @@ spa,readStone,La Piedra parece tener algo escrito en ella...
 eng,readStone,The Stone seems to have something written on it...
 spa,readDoor,Parece que el marco de la puerta tiene algo escrito...
 eng,readDoor,The door frame seems to have something written on it...
+spa,correctDoor,Bueno ¡Esa fue la correcta!
+eng,correctDoor,Well ¡That was the right one!
+spa,takeDmg,Maldita trampa... tengo que tomar una poción.
+eng,takeDmg,Damn trap... I have to take a potion.
+spa,noLifes,Estoy sin pociones.../n/tengo que ser muy cuidadosa ...
+eng,noLifes,I'm out of potions.../n/I have to be very careful...
 spa,pickDoor,Elegir esta Puerta.
 eng,pickDoor,Choose this Door.
+spa,newRoom,Una nueva habitación./n/Mejor leo la roca...
+eng,newRoom,A new room./n/I better read the rock...
+spa,lastDoor,"Creo que es la salida, debe ser la ultima puerta!!"
+eng,lastDoor,"I think it's the exit, it must be the last door!!"
 spa,goRock,Volver a la Roca.
 eng,goRock,Return to the Rock.
 spa,goDoorC,Ir a la Puerta del medio.
@@ -104,7 +114,7 @@ eng,riddle1easy,In castles you will see me.../n/I can be made of iron. Without m
 spa,riddle1easyTrue,Una Armadura.
 eng,riddle1easyTrue,An Armor.
 spa,riddle1easyFalse1,Un Escudo.
-eng,riddle1easyyFalse1,A Shield.
+eng,riddle1easyFalse1,A Shield.
 spa,riddle1easyFalse2,Una Muralla.
 eng,riddle1easyFalse2,A Wall.
 spa,riddle3easy,En la mesa del rey me puedes hallar.../n/Aunque de madera no suelo estar. ¿Qué soy?
@@ -147,3 +157,115 @@ spa,riddle6easyFalse1,Un Escudo.
 eng,riddle6easyFalse1,A Shield.
 spa,riddle6easyFalse2,Un Yelmo.
 eng,riddle6easyFalse2,A Helmet.
+spa,riddle1normal,Ruge como un dragón pero no tiene fuego./n/Se oculta en las montañas y su furia es ciega. ¿Qué es?
+eng,riddle1normal,He roars like a dragon but he has no fire./n/He hides in the mountains and his fury is blind. What is he?
+spa,riddle1normalTrue,Una Avalancha.
+eng,riddle1normalTrue,An Avalanche.
+spa,riddle1normalFalse1,Un Troll.
+eng,riddle1normalFalse1,A Troll.
+spa,riddle1normalFalse2,Un Hechicero.
+eng,riddle1normalFalse2,A Wizard.
+spa,riddle2normal,En los muros del castillo vigilo sin descansar./n/No tengo vida pero mis ojos nunca dejan de mirar. ¿Qué soy?
+eng,riddle2normal,On the castle walls I watch without rest./n/I have no life but my eyes never stop looking. What am I?
+spa,riddle2normalTrue,Una Gárgola.
+eng,riddle2normalTrue,A Gargoyle.
+spa,riddle2normalFalse1,Un Cuervo.
+eng,riddle2normalFalse1,A Raven.
+spa,riddle2normalFalse2,Un Centinela.
+eng,riddle2normalFalse2,A Sentinel.
+spa,riddle3normal,Desde lo alto del castillo puedo ver el mundo entero./n/No tengo piernas pero vuelo con el viento. ¿Qué soy?
+eng,riddle3normal,From the top of the castle I can see the whole world./n/I have no legs but I fly with the wind. What am I?
+spa,riddle3normalTrue,Una Bandera.
+eng,riddle3normalTrue,A Flag.
+spa,riddle3normalFalse1,Una Balista.
+eng,riddle3normalFalse1,A Ballista.
+spa,riddle3normalFalse2,Un Halcón Mensajero.
+eng,riddle3normalFalse2,A Messenger Falcon.
+spa,riddle4normal,Si me tienes serás sabio./n/Si me buscas serás noble./n/Pero si me desprecias caerás en la ruina. ¿Qué soy?
+eng,riddle4normal,If you have me you will be wise./n/If you seek me you will be noble./n/But if you despise me you will fall into ruin. What am I?
+spa,riddle4normalTrue,Conocimiento.
+eng,riddle4normalTrue,Knowledge.
+spa,riddle4normalFalse1,Paciencia.
+eng,riddle4normalFalse1,Patience.
+spa,riddle4normalFalse2,Dinero.
+eng,riddle4normalFalse2,Money.
+spa,riddle5normal,Tengo el poder de cambiar el destino de reyes y aldeanos./n/Con una pluma se me escribe y con la sangre se me rompe. ¿Qué soy?
+eng,riddle5normal,I have the power to change the fate of kings and villagers./n/With a pen I am written and with blood I am broken. What am I?
+spa,riddle5normalTrue,Un Juramento.
+eng,riddle5normalTrue,An Oath.
+spa,riddle5normalFalse1,Una Promesa.
+eng,riddle5normalFalse1,A Promise.
+spa,riddle5normalFalse2,Un Deseo.
+eng,riddle5normalFalse2,A Wish.
+spa,riddle6normal,Los campesinos me usan para trabajar./n/Los caballeros para luchar y los reyes para gobernar. ¿Qué soy?
+eng,riddle6normal,Peasants use me to work./n/Knights use me to fight and kings use me to rule. What am I?
+spa,riddle6normalTrue,Una Mano.
+eng,riddle6normalTrue,A hand.
+spa,riddle6normalFalse1,Un Hacha.
+eng,riddle6normalFalse1,An Axe.
+spa,riddle6normalFalse2,Una Capa.
+eng,riddle6normalFalse2,A Cape.
+spa,riddle1hard,Bajo la luna me oculto y en la sombra soy letal./n/Un solo golpe en el momento justo y la guerra puedo cambiar. ¿Qué soy?
+eng,riddle1hard,Under the moon I hide and in the shadows I am lethal./n/A single blow at the right moment and I can change the war. What am I?
+spa,riddle1hardTrue,Un Asesino.
+eng,riddle1hardTrue,An Assassin.
+spa,riddle1hardFalse1,Un Espía.
+eng,riddle1hardFalse1,A Spy.
+spa,riddle1hardFalse2,Un Arquero.
+eng,riddle1hardFalse2,An Archer.
+spa,riddle2hard,Se alzan en la guerra y caen en la paz./n/Cuando están en pie defienden reyes y tierras. ¿Qué son?
+eng,riddle2hard,They rise in war and fall in peace./n/When they stand they defend kings and lands. What are they?
+spa,riddle2hardTrue,Las Lanzas.
+eng,riddle2hardTrue,The Spears.
+spa,riddle2hardFalse1,Los Mercenarios.
+eng,riddle2hardFalse1,The Mercenaries.
+spa,riddle2hardFalse2,Las Torres de un castillo.
+eng,riddle2hardFalse2,The Towers of a Castle.
+spa,riddle3hard,Solo en la oscuridad se me busca y cuando se me encuentra desaparezco. ¿Qué soy?
+eng,riddle3hard,Only in the darkness do people look for me and when they find me I disappear. What am I?
+spa,riddle3hardTrue,Un Secreto.
+eng,riddle3hardTrue,A Secret.
+spa,riddle3hardFalse1,Un Ladrón.
+eng,riddle3hardFalse1,A Thief.
+spa,riddle3hardFalse2,Una Luciérnaga.
+eng,riddle3hardFalse2,A Firefly.
+spa,riddle4hard,Los reyes me tienen pero no pueden sostenerme./n/Algunos me buscan pero pocos me logran ver. ¿Qué soy?
+eng,riddle4hard,Kings have me but they cannot hold me./n/Some seek me but few see me. What am I?
+spa,riddle4hardTrue,Un Consejo.
+eng,riddle4hardTrue,Piece of Advice.
+spa,riddle4hardFalse1,El Poder.
+eng,riddle4hardFalse1,The Power.
+spa,riddle4hardFalse2,Una Oportunidad.
+eng,riddle4hardFalse2,An Opportunity.
+spa,riddle5hard,Más fuerte que el acero pero más frágil que un susurro./n/Los reyes me temen y los sabios me buscan. ¿Qué soy?
+eng,riddle5hard,Stronger than steel yet weaker than a whisper./n/Kings fear me and the wise seek me. What am I?
+spa,riddle5hardTrue,La Verdad.
+eng,riddle5hardTrue,The Truth.
+spa,riddle5hardFalse1,Un Secreto.
+eng,riddle5hardFalse1,A Secret.
+spa,riddle5hardFalse2,Un Chisme.
+eng,riddle5hardFalse2,A Gossip.
+spa,riddle6hard,En batalla soy un gran aliado pero si me golpeas me volveré tu enemigo. ¿Qué soy?
+eng,riddle6hard,In battle I am a great ally but if you hit me I will become your enemy. What am I?
+spa,riddle6hardTrue,Una Armadura.
+eng,riddle6hardTrue,An Armor.
+spa,riddle6hardFalse1,Una Espada.
+eng,riddle6hardFalse1,A Sword.
+spa,riddle6hardFalse2,Un Caballo.
+eng,riddle6hardFalse2,A Horse.
+spa,easyResult,Bueno... veo que elegiste la dificultad facil pero bueno no te juzgo./n/Con una cantidad total de puntos:
+eng,easyResult,Well... I see you chose the easy difficulty but hey I'm not judging you./n/With a total amount of points:
+spa,normalResult,Llegaste al final con la dificultad normal y un total de puntos de:
+eng,normalResult,You reached the end with the difficulty on normal and a total of points of:
+spa,hardResult,¿Quién lo hubiera pensado?/n/Me sorprendiste con la dificultad en difícil y lograste pasar todas las salas con un total de puntos de:
+eng,hardResult,Who would have thought?/n/You surprised me with the difficulty on hard and managed to pass all the rooms with a total of points of:
+spa,end1,Bueno espero que les haya gustado!
+eng,end1,Well I hope you liked it!
+spa,asset,Utilicé 2 recursos gratuitos de la tienda de recursos./n/Algunos efectos de sonido directamente de YouTube y la imagen de GameOver con la IA de Bing jajaja
+eng,asset,I used 2 free assets from the assets store./n/Some sfx directly from youtube and the GameOver with bing's AI hahaha
+spa,end2,Me hubiera gustado dedicarle más tiempo pero fue una semana difícil/n/serán aproximadamente 18-22 horas de trabajo este mini-juego.
+eng,end2,I would have liked to spend more time on it but it was a difficult week/n/it will be approximately 18-22 hours of work on this mini-game.
+spa,end3,La herramienta es muy buena y ya he pensado en varios usos y comandos que podrían combinarse muy bien con Lang./n/Espero verlos en la reunión!
+eng,end3,The tool is very good and I have already thought of several uses and commands that could be combined very well with Lang./n/I hope to see you at the meeting!
+spa,over,¿Intentar otra vez?
+eng,over,Try again?

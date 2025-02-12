@@ -10,12 +10,17 @@ public class SecondSceneScript : SceneScript
     private string _actualRiddle;
     private DoorPosition _currentDoor;
 
+    bool _potsWarning, _lastDoorWarning;
+
     public void ReceiveRiddle(string ID)
     {
         _actualRiddle = ID;
     }
     public override void StartScene()
     {
+        _potsWarning = false;
+        _lastDoorWarning = false;
+
         var dialogTexts = new List<DialogData>();
 
         UnityAction callBack = () => Tuto();
@@ -95,7 +100,7 @@ public class SecondSceneScript : SceneScript
 
             dialogTexts.Add(options);
 
-            dialogTexts.Add(new DialogData(Flyweight.EMOTE_HEAD_THINK + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HEAD, CheckLoop));
+            dialogTexts.Add(new DialogData("/sound:Steps/" + Flyweight.EMOTE_HEAD_THINK + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HEAD, CheckLoop));
 
             DialogManager.Show(dialogTexts);
         }
@@ -109,11 +114,12 @@ public class SecondSceneScript : SceneScript
         if (DialogManager.Result == "1")
         {
             LoopToStone();
+            GameManager.Instance.MovingToPoint(DoorPosition.stone);
             return;
         }
         else if (DialogManager.Result == "5")
         {
-            Debug.Log("Abri la puerta: " + _currentDoor);
+            EnterDoor();
             return;
         }
         else if (DialogManager.Result == "3")
@@ -123,12 +129,23 @@ public class SecondSceneScript : SceneScript
         else
             _currentDoor = DoorPosition.center;
 
+
+        GameManager.Instance.MovingToPoint(_currentDoor);
         LoopToDoor(_currentDoor);
     }
 
     private void LoopToStone()
     {
         var dialogTexts = new List<DialogData>();
+
+        if (!_lastDoorWarning)
+        {
+            if(GameManager.Instance.DataLibrary.SessionInfo.DoorsLeft() == 1)
+            {
+                dialogTexts.Add(new DialogData(Flyweight.EMOTE_HALF_HAPPY + LangManager.Instance.GetTranslate("lastDoor"), Flyweight.DIALOG_CHAR_HEAD));
+                _lastDoorWarning = true;
+            }
+        }
 
         dialogTexts.Add(new DialogData(LangManager.Instance.GetTranslate("readStone")));
 
@@ -143,7 +160,7 @@ public class SecondSceneScript : SceneScript
 
         dialogTexts.Add(options);
 
-        dialogTexts.Add(new DialogData(Flyweight.EMOTE_HEAD_THINK + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HEAD, CheckLoop));
+        dialogTexts.Add(new DialogData("/sound:Steps/" + Flyweight.EMOTE_HEAD_NORMAL + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HEAD, CheckLoop));
 
         DialogManager.Show(dialogTexts);
     }
@@ -153,7 +170,7 @@ public class SecondSceneScript : SceneScript
 
         dialogTexts.Add(new DialogData(LangManager.Instance.GetTranslate("readDoor")));
 
-        dialogTexts.Add(new DialogData("/speed:down/" + LangManager.Instance.GetTranslate(GameManager.Instance.SelectedDoorInfo(position).AnswerID) + "/speed:init/"));
+        dialogTexts.Add(new DialogData(LangManager.Instance.GetTranslate(GameManager.Instance.SelectedDoorInfo(position).AnswerID) + "/speed:init/"));
 
         DialogData options = new DialogData(LangManager.Instance.GetTranslate("whatDo"));
 
@@ -184,7 +201,45 @@ public class SecondSceneScript : SceneScript
 
         dialogTexts.Add(options);
 
-        dialogTexts.Add(new DialogData(Flyweight.EMOTE_HEAD_THINK + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HEAD, CheckLoop));
+        dialogTexts.Add(new DialogData("/sound:Steps/" + Flyweight.EMOTE_HEAD_NORMAL + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HEAD, CheckLoop));
+
+        DialogManager.Show(dialogTexts);
+    }
+
+    private void EnterDoor()
+    {
+        var dialogTexts = new List<DialogData>();
+
+        GameManager.Instance.myCam.FadeToBlack();
+
+        dialogTexts.Add(new DialogData("/sound:Steps/" + Flyweight.EMOTE_HEAD_NORMAL + LangManager.Instance.GetTranslate("ellipsis"), Flyweight.DIALOG_CHAR_HEAD, GoThroughDoor));
+
+        DialogManager.Show(dialogTexts);
+    }
+    private void GoThroughDoor()
+    {
+        var dialogTexts = new List<DialogData>();
+
+        if (GameManager.Instance.TrySelectedDoor(_currentDoor))
+        {
+            dialogTexts.Add(new DialogData(Flyweight.EMOTE_HEAD_HAPPY + LangManager.Instance.GetTranslate("correctDoor"), Flyweight.DIALOG_CHAR_HEAD));
+        }
+        else
+        {
+            dialogTexts.Add(new DialogData("/sound:Spike/" + Flyweight.EMOTE_HEAD_SCARED + LangManager.Instance.GetTranslate("takeDmg"), Flyweight.DIALOG_CHAR_HEAD));
+        }
+
+        if(!GameManager.Instance.StillHavePots() & !_potsWarning)
+        {
+            dialogTexts.Add(new DialogData(Flyweight.EMOTE_HEAD_ANGRY + LangManager.Instance.GetTranslate("noLifes"), Flyweight.DIALOG_CHAR_HEAD));
+            _potsWarning = true;
+        }
+
+        GameManager.Instance.myCam.FadeFromBlack();
+
+        dialogTexts.Add(new DialogData("/sound:Steps/" + Flyweight.EMOTE_HEAD_NORMAL + LangManager.Instance.GetTranslate("newRoom"), Flyweight.DIALOG_CHAR_HEAD, LoopToStone));
+
+        GameManager.Instance.MovingToPoint(DoorPosition.stone);
 
         DialogManager.Show(dialogTexts);
     }

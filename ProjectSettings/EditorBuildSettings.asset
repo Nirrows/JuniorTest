@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameTest/Scenes/ThirdScene.unity
     guid: a4e1eec9befed6e4eb9e85f8c0f59655
+  - enabled: 1
+    path: Assets/GameTest/Scenes/GameOver.unity
+    guid: ed0f26e646af4bb4a9e231efad438261
   m_configObjects: {}
